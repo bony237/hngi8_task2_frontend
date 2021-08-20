@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @font-face {
+        font-family: "Overlock";
+        src: url(./assets/fonts/overlock/Overlock-Regular.ttf);
+      }
+      @font-face {
+        font-family: "Overlock-Bold";
+        src: url(./assets/fonts/overlock/Overlock-Bold.ttf);
+      }
+
+      html,
+      body {
+        padding: 0;
+        background-color: #538135 !important;
+      }
+
+      /* body > .container {
+        background-color: #538135;
+      } */
+      * {
+        font-family: "Overlock";
+        color: whitesmoke;
+      }
+      .factory-bold {
+        font-family: "Overlock-Bold";
+      }
+    </style>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/swiper-bundle.min.css" rel="stylesheet" />
+    <title>Bony237 Resume (HNGi8 task2)</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="pt-2">
+        <div id="name" class="fs-3 factory-bold">Bony J. Ngounou (bony237)</div>
+      </header>
+      <div class="container dev-illus d-flex align-items-stretch my-5">
+        <div class="col-6">
+          <!-- Slider main container -->
+          <div class="swiper-container h-100">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide d-flex justify-content-center">
+                <img
+                  src="./assets/images/illus_responsiveness.png"
+                  alt="responsive"
+                  class="align-self-center"
+                />
+              </div>
+              <div class="swiper-slide d-flex justify-content-center">
+                <img
+                  src="./assets/images/illus_responsiveness.png"
+                  alt="responsive"
+                  class="align-self-center"
+                />
+              </div>
+              <div class="swiper-slide d-flex justify-content-center">
+                <img
+                  src="./assets/images/illus_responsiveness.png"
+                  alt="responsive"
+                  class="align-self-center"
+                />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+        <div id="about-me" class="col-6">
+          <div class="title fs-1 factory-bold">
+            Hello, I'm Bony and <br />
+            I'm a full-stack developer.
+          </div>
+          <div class="presentation fs-3 mt-3">
+            I am polyvalent on any web or mobile development technology that
+            implements the <span class="factory-bold">JavaScript</span> or
+            <span class="factory-bold">TypeScript</span> language. Here is my
+            favorite stack:
+            <span class="factory-bold">
+              ExpressJs, NodeJs, ReactJs, React Native
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="my-stack">
+        <div id="skills-graph">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div id="others-details-skills">
+          <div id="used-languages"></div>
+          <div id="mastered-tools"></div>
+        </div>
+      </div>
+      <div id="get-in-touch" class="col-9 my-5 mx-auto">
+        <div class="title fs-1 factory-bold">Get in touch</div>
+        <div id="contact-involving-message" class="fs-5">
+          If you want to contact me, chat with me about a collaboration on a
+          project or just say hello, fill out the form below or send an email to
+          <span class="factory-bold">nbj.ngoube@gmail.com</span> and let's start
+          a conversation.
+        </div>
+      </div>
+      <footer class="fixed-bottom text-center mb-3">
+        Copyright © 2021 All rights reserved
+      </footer>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/chart.js"></script>
+    <script src="./assets/js/custom/skills-graph-config.js"></script>
+    <script type="module">
+      import { config } from "./assets/js/custom/skills-graph-config.js";
+      const swiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        loop: true,
+        speed: 400,
+
+        autoplay: {
+          delay: 2000,
+        },
+      });
+
+      alert("Here is my name : NGOUNOU NGOUBEYOU Bony Junior");
+      var myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+  </body>
+</html>
